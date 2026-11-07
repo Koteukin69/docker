@@ -1,0 +1,10 @@
+services:
+  kanboard:
+    image: kanboard/kanboard:v1.2.57
+    container_name: kanboard
+    restart: unless-stopped
+    ports:
+      - "127.0.0.1:10001:80"
+    volumes:
+      - ./data:/var/www/app/data
+      - ./plugins:/var/www/app/plugins
